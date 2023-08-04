@@ -296,21 +296,51 @@ ul
     font-weight: bolder;
     font-size: 18px;
     padding: 10px;
+    flex: 1;
 }
 
-.header-about-me
+.about-me
 {
-    
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0;
+}
+
+.about-me p
+{
+    font-size: 24px;
+}
+
+.about-me img
+{
+    width: 480px;
+    height: 600px;
+}
+
+.bio 
+{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 1400px;
+    flex-wrap: wrap;
 }
 
 .footer
 {
     background-color: #1f2937;
     display: flex;
-    padding: 10px;
+    padding: 30px;
     justify-content: center;
     align-items: center;
+    flex: 1;
+}
+
+.footer a
+{
     color: white;
     font-weight: bolder;
     font-size: 18px;
+
 }
