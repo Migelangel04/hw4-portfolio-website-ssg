@@ -3,122 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Migelangel</title>
+    <title>Migelangel's Portfolio Website</title>
+    <style>
+        span, code {
+            color: red;
+        }
+    </style>
     <link rel="stylesheet" href="./styles.css"/>
+    <script src="./script.js" defer></script>
 </head>
     
 <body>
     
-    <div class="header">
+    <header>
         <!-- Header -->
-        <div class="header-logo">
-            <p>Migelangel's HAHA Website</p>
-        </div>    
+        <a href="#landing-page"><h1>Migelangel Carrillo</h1></a>   
 
-        <div class="header-links">
-            <a href="https://github.com/Migelangel04" class="link">GitHub</a>
-            <a href="https://www.linkedin.com/in/migelangel-carrillo-76063b269/" class="link">LinkedIn</a>
-            <a href="./about.html" class="link">About Me</a>
-        </div>
+        <nav>
+            <ul>
+                <li><h2><a href="#about-me" class="link">About Me</a></h2></li>
+                <li><h2><a href="#experience" class="link">Experience</a></h2></li>
+                <li><h2><a href="#projects" class="link">Projects</a></h2></li>
+                <li><h2><a href="#contact" class="link">Contact</a></h2></li>
+                <li><h2><a href="./tagPlayground.html" class="link">Element Demos</a></h2></li>
+            </ul>
+        </nav>
         <!--        -->
-    </div>
+    </header>
+
+    <hr />
     
-    <div class="body-footer">
+    <main>
+        <section id="landing-page">
+            <img src="./images/headshot.JPG" alt ="Headshot of myself." width="300" height="400"/>
+            <h3>Welcome to my <span>Personal Website</span>!!!</h3>
+            <p>3rd Year Math-CS major at UCSD | Incoming <strong>Software Engineering Intern</strong> at <em>Company XYZ</em></p>
+        </section>
+        <section id="about-me">
+            <p class="about-me-description">
+                This is the about me section <i>description</i>. I plan to write some
+                quick 4-6 sentence description highlighting noteable things about myself.
+                This could be things like my <code>hobbies</code>, <code>achievements</code>,
+                <code>skills(outside of tech)</code>, and <code>career interests</code>. This
+                should not be too long because a recruiter or engineer is here to see job related 
+                information.
+            </p>
 
-        <div class="description-image">
-            <!-- Description & Image-->
-            <section class="description">
-                <p class="title">Current Education and Employment</p>
-                <p class="summary">
-                    I am currently an undergraduate at the University of California, San Diego 
-                    pursing a Bachelor of Science in Mathematics-Computer Science.
-                    For any queries, refer to the button below.
-                </p>
-                <button><a href="https://www.linkedin.com/in/migelangel-carrillo-76063b269/" class="link">LinkedIn</a></button>
-            </section>
+            <picture>
+                <source />
+            </picture>
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>   
+    </main>
 
-            <img src="./images/giesel.jpg" alt="Giesel Libary">
-            <!--                  -->
-        </div>
-
-        <div class="current-past-projects">
-            <!-- Recent Project Section -->
-            <p class="title-projects">Recent Projects</p>
-
-            <div class="containers">
-
-                <section class="container">
-                    <a href="https://github.com/Migelangel04/Recipes-HTML">
-                        <img src="./images/bananabread.png" alt="Recipes WebPage">
-                    </a>
-                    <p>
-                        First project using HTML and CSS basics in where 
-                        I designed a basic webpage.
-                    </p>
-                </section>
-
-                <section class="container">
-                    <a href="https://github.com/Migelangel04/Landing-Page">
-                        <img src="./images/webpage.webp" alt="Landing Page">
-                    </a>
-                    <p>
-                        The current webpage we are on, using HTML and CSS 
-                        flexbox.
-                    </p>
-                </section>
-
-                <section class="container">
-                    <a href="https://github.com/Migelangel04/">
-                        <img src="./images/javascript.webp" alt="Javascript Calculator">
-                    </a>
-                    <p>
-                        First project using Javascript where I developed a fully
-                        functional calculator.
-                    </p>
-                </section>
-
-            </div>
-            <!--                     -->
-        </div>
-
-        <div class="quote-section">
-            <!-- Bible Quote Section -->
-
-            <div class="section">
-                <p class="quote"><em>Therefore, I say unto you, What things soever ye 
-                    desire, when ye pray, believe that ye receive them, and ye shall have them.</em>
-                </p>
-
-                <div class="author"><p>- Mark 11:24</p></div>
-            </div>  
-            <!--                     -->
-        </div>
-
-        <div class="signButton-footer">
-            <!-- Website Recommendation Section -->
-            <div class="credits">
-                <div class="heading">
-                    <p style="font-weight: bolder;">Website Recommendation!</p>
-                    <p>Click the button to check out The Odin Project.</p>
-                </div>
-
-                <div class="odin-project">
-                    <button>
-                        <a href="https://www.theodinproject.com/paths">Click Me</a>
-                    </button>
-                </div>
-            </div>
-            <!--                                -->
-        </div>
-
-
-        <!-- Footer -->
-        <div class="hello">
-            <a href="./images/dog.jpg">PICTURE OF DOG :]</a>
-        </div>
-        <!--        -->
-
-    </div>
+    <hr />
+    <!-- Footer -->
+    <footer>
+        <a href="./images/dog.jpg">PICTURE OF DOG :]</a>
+    </footer>
+    <!--        -->
 
 </body>
 </html>
