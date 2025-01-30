@@ -2,4 +2,7 @@
 {
     box-sizing: border-box;
 }
+table {
+    border: 2px solid black;
+}
 /* Max 3 styles for HW2, CSE 134B */

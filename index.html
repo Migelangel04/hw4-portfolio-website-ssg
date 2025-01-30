@@ -6,7 +6,7 @@
     <title>Migelangel's Portfolio Website</title>
     <style>
         span, code {
-            color: red;
+            border: 1px solid black;
         }
     </style>
     <link rel="stylesheet" href="./styles.css"/>
@@ -14,6 +14,8 @@
 </head>
     
 <body>
+
+    <!-- Most of the sections still require content, I am just filling for look and current presentation -->
     
     <header>
         <!-- Header -->
@@ -21,6 +23,7 @@
 
         <nav>
             <ul>
+                <!-- Will add sound effects to these using the "woosh" audio file -->
                 <li><h2><a href="#about-me" class="link">About Me</a></h2></li>
                 <li><h2><a href="#experience" class="link">Experience</a></h2></li>
                 <li><h2><a href="#projects" class="link">Projects</a></h2></li>
@@ -28,18 +31,23 @@
                 <li><h2><a href="./tagPlayground.html" class="link">Element Demos</a></h2></li>
             </ul>
         </nav>
-        <!--        -->
+        <!--   Links to the sections within the single page document     -->
     </header>
 
-    <hr />
+    <hr>
     
     <main>
+        <!-- This part will encompass the entire page, regardless of browser with scrolling to get to other section -->
         <section id="landing-page">
+            <!-- Set up for landing page -->
             <img src="./images/headshot.JPG" alt ="Headshot of myself." width="300" height="400"/>
-            <h3>Welcome to my <span>Personal Website</span>!!!</h3>
+            <h3>Welcome to my <span>Personal Website</span>!!!</h3> 
+            <!-- Will replace the above h3 with dynamic welcome message (at least 3 that will rotate after some setTimeout) -->
             <p>3rd Year Math-CS major at UCSD | Incoming <strong>Software Engineering Intern</strong> at <em>Company XYZ</em></p>
         </section>
+
         <section id="about-me">
+
             <p class="about-me-description">
                 This is the about me section <i>description</i>. I plan to write some
                 quick 4-6 sentence description highlighting noteable things about myself.
@@ -54,9 +62,69 @@
                 <img src="./images/pictureAtDinner.jpg" alt="Picture at dinner" width="500" height="600"/> 
             </picture>
         </section>
-        <section></section>
-        <section></section>
-        <section></section>   
+        <section id="experience">
+            <!-- Section content complete, styles required -->
+            <div>
+                <img 
+                    src="./images/sdsc.jpeg" 
+                    alt="Image of the San Diego Supercomputer Center"
+                />
+                <h2>
+                    San Diego Supercomputer Center (SDSC)
+                </h2>
+                <p>
+                    Role: <em>Software Engineering Intern</em>
+                </p>
+                <p>
+                    Duration: 06/2024 - 08/2024
+                </p>
+                <section>
+                    <h3>Responsiblities/Achievements</h3>
+                    <ul>
+                        <li>
+                            Developed <b>Axios</b> filing, enabling seamless interaction between front-end applications and Django back-end
+                            services; enhanced data retrieval speed by <b>20%</b>, significantly improving overall application performance.
+                        </li>
+                        <li>
+                            Implemented user Sign Up and Login using <b>React Native</b> on the front-end to handle all valid and invalid inputs
+                            for a user, reducing API calls to the back-end by <b>10%</b>.
+                        </li>
+                        <li>
+                            Utilized State Management system for application using <b>Redux</b>, <b>Redux Toolkit</b> and <b>Async Storage</b> to increase
+                            user data fetch time on client-side code.
+                        </li>
+                        <li>
+                            Spearheaded the product design for both low-fidelity and high-fidelity prototypes in <b>Figma</b>, successfully delivering
+                            15 interactive mockups that streamlined the user feedback process and increased design approval rates by <b>40%</b>.
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <div>
+                <img src="./images/atlassian.png" alt="Picture of Atlassian">
+                <h2>
+                    Atlassian
+                </h2>
+                <p>
+                    Role: <em>Summer 2025 Software Engineering Intern</em>
+                </p>
+                <p>
+                    Duration: Incoming (Projected 06/2025-09/2025)
+                </p>
+                <section>
+                    <h3>Responsiblities/Achievements</h3>
+                    <p>TBD</p>
+                </section>
+            </div>
+        </section>
+        <section id="projects">
+
+        </section>
+        <section id="contact">
+            <form>
+                
+            </form>
+        </section>   
     </main>
 
     <hr />
