@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tag Playground</title>
     <link rel="stylesheet" href="./styles.css"/>
-    <script src="./script.js" defer></script>
+    <script src="./tagScript.js" defer></script>
 </head>
 <body>
     <hgroup>
@@ -184,7 +184,30 @@
             <p>The secret to dancing is patience!!!</p>
         </template>
         <hr>
-        
+        <h2>Use of address tag</h2>
+        <address>
+            <a href="mailto:migelangelcarrillo@gmail.com">migelangelcarrillo@gmail.com</a>
+        </address>
+        <hr>
+        <h2>Usage of dialog tag</h2>
+        <dialog open>This can work like a model!</dialog>
+        <hr>
+        <h2>Usage of ins and del</h2>
+        <del>
+            <p>Some delete tab</p>
+        </del> 
+        <ins>
+            <p>Some add tab</p>
+        </ins>
+        <hr>
+        <h2>Usage of search element</h2>
+        <search>
+            <form action="./search/">
+              <label for="song">Song Search</label>
+              <input type="search" id="song" name="song" />
+              <button type="submit" disabled>Search</button>
+            </form>
+        </search>
     </main>
 </body>
 </html>

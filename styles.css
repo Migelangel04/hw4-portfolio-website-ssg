@@ -5,4 +5,7 @@
 table {
     border: 2px solid black;
 }
+project-details {
+    display: flex;
+}
 /* Max 3 styles for HW2, CSE 134B */

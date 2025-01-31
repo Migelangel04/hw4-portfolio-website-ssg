@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migelangel's Portfolio Website</title>
     <style>
-        span, code {
+        span, code, hello-world {
             border: 1px solid black;
         }
     </style>
@@ -45,7 +45,6 @@
             <!-- Will replace the above h3 with dynamic welcome message (at least 3 that will rotate after some setTimeout) -->
             <p>3rd Year Math-CS major at UCSD | Incoming <strong>Software Engineering Intern</strong> at <em>Company XYZ</em></p>
         </section>
-
         <section id="about-me">
 
             <p class="about-me-description">
@@ -118,11 +117,123 @@
             </div>
         </section>
         <section id="projects">
+            <div>
+                <section>
+                    <img src="./images/upCourt.jpg" alt="Upcourt Image of welcome page." width="300" height="400"/>
+                    <project-details>
+                        <h2>Up Court Mobile App</h2>
+                        <p>Description: Some description of the app, this p tag is here for structure.</p>
+                        <ul>
+                            <li>React Native</li>
+                            <li>Django (currently switching to NodeJS)</li>
+                            <li>Axios</li>
+                            <li>ContextAPI</li>
+                            <li>EsLint & Prettier</li>
+                            <li>JEST</li>
+                            <li>AI API (GPT or Gemini)</li>
+                        </ul>
+                        <div>
+                            <button disabled>Demo</button>
+                            <button disabled>Source Code</button>
+                        </div>
+                    </project-details>
+                </section>
+                <section>
+                    <img src="./images/bountyHunter.jpg" alt="Bounty Hunter Image of welcome page." width="300" height="400"/>
+                    <project-details>
+                        <h2>Bounty Hunter Mobile App</h2>
+                        <p>Description: Some description of the app, this p tag is here for structure.</p>
+                        <ul>
+                            <li>React Native</li>
+                            <li>Django</li>
+                            <li>Axios</li>
+                            <li>Redux</li>
+                            <li>ESLint & Prettier</li>
+                        </ul>
+                        <div>
+                            <button disabled>Demo</button>
+                            <button disabled>Source Code</button>
+                        </div>
+                    </project-details>
+                </section>
+                <section>
+                    <img src="./images/etchSketchSS.png" alt="Etch a Sketch Page" width="300" height="400"/>
+                    <project-details>
+                        <h2>Etch A Sketch</h2>
+                        <p>Description: Some description of the app, this p tag is here for structure.</p>
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                        <div>
+                            <button disabled>Demo</button>
+                            <button disabled>Source Code</button>
+                        </div>
+                    </project-details>
+                </section>
+                <section>
+                    <img src="./images/TicTacToe_SS.png" alt="Tic-Tac-Toe" width="300" height="400"/>
+                    <project-details>
+                        <h2>Tic Tac Toe</h2>
+                        <p>Description: Some description of the app, this p tag is here for structure.</p>
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                        <div>
+                            <button disabled>Demo</button>
+                            <button disabled>Source Code</button>
+                        </div>
+                    </project-details>
+                </section>
+                <section>
+                    <img src="./images/AdminDashSS.png" alt="Admin Dashboard" width="400" height="400"/>
+                    <project-details>
+                        <h2>Admin Dashboard Design</h2>
+                        <p>Description: Some description of the app, this p tag is here for structure.</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                        <div>
+                            <button disabled>Demo</button>
+                            <button disabled>Source Code</button>
+                        </div>
+                    </project-details>
+                </section>
+            </div>
 
         </section>
         <section id="contact">
-            <form>
-                
+            <form action="" method="get">
+                <fieldset>
+                    <legend>Contact Form</legend>
+                    <field-input>
+                        <label for="name">Name: </label>
+                        <input type="text" name="name" id="name" required>
+                    </field-input>
+                    <field-input>
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" id="email" required>
+                    </field-input>
+                    <field-input>
+                        <label for="message">Message: </label>
+                        <textarea type="text" name="message" id="message" rows="5" cols="33" required>
+                        </textarea>
+                    </field-input>
+                    <field-input>
+                        <label for="reason">Reason: </label>
+                        <input list="reason-choices" name="reason" id="reason" required>
+                        <datalist id="reason-choices">
+                            <option value="Business"></option>
+                            <option value="Personal"></option>
+                            <option value="Networking"></option>
+                        </datalist>
+                    </field-input>
+                    <button type="submit">Submit</button>
+                </fieldset>
             </form>
         </section>   
     </main>
@@ -131,6 +242,7 @@
     <!-- Footer -->
     <footer>
         <a href="./images/dog.jpg">PICTURE OF DOG :]</a>
+        <hello-world>My Hello World Element</hello-world>
     </footer>
     <!--        -->
 
