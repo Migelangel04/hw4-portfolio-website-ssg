@@ -7,5 +7,9 @@ table {
 }
 project-details {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
+/* project-detatils is my semantic CSS custom element */
 /* Max 3 styles for HW2, CSE 134B */
