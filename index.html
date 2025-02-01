@@ -9,7 +9,7 @@
             border: 1px solid black;
         }
     </style>
-    <link rel="stylesheet" href="./styles.css"/>
+    <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
 </head>
     
@@ -40,34 +40,39 @@
         <!-- This part will encompass the entire page, regardless of browser with scrolling to get to other section -->
         <section id="landing-page">
             <!-- Set up for landing page -->
-            <img src="./images/headshot.JPG" alt ="Headshot of myself." width="300" height="400"/>
+            <img src="./images/headshot.JPG" alt ="Headshot of myself." width="300" height="400">
             <h3>Welcome to my <span>Personal Website</span>!!!</h3> 
             <!-- Will replace the above h3 with dynamic welcome message (at least 3 that will rotate after some setTimeout) -->
             <p>3rd Year Math-CS major at UCSD | Incoming <strong>Software Engineering Intern</strong> at <em>Company XYZ</em></p>
         </section>
         <section id="about-me">
+            <h2>
+                About Me
+            </h2>
 
-            <p class="about-me-description">
-                This is the about me section <i>description</i>. I plan to write some
-                quick 4-6 sentence description highlighting noteable things about myself.
-                This could be things like my <code>hobbies</code>, <code>achievements</code>,
-                <code>skills(outside of tech)</code>, and <code>career interests</code>. This
-                should not be too long because a recruiter or engineer is here to see job related 
-                information.
-            </p>
-
-            <picture>
-                <source srcset="./images/headshot.JPG" width="300" height="400" media="(orientation: portrait)"/>
-                <img src="./images/pictureAtDinner.jpg" alt="Picture at dinner" width="500" height="600"/> 
-            </picture>
+            <div>
+                <p class="about-me-description">
+                    This is the about me section <i>description</i>. I plan to write some
+                    quick 4-6 sentence description highlighting noteable things about myself.
+                    This could be things like my <code>hobbies</code>, <code>achievements</code>,
+                    <code>skills(outside of tech)</code>, and <code>career interests</code>. This
+                    should not be too long because a recruiter or engineer is here to see job related
+                    information.
+                </p>
+                <picture>
+                    <source srcset="./images/headshot.JPG" width="300" height="400" media="(orientation: portrait)">
+                    <img src="./images/pictureAtDinner.jpg" alt="Picture at dinner" width="500" height="600">
+                </picture>
+            </div>
         </section>
         <section id="experience">
             <!-- Section content complete, styles required -->
+            <h2>Experience</h2>
             <div>
                 <img 
                     src="./images/sdsc.jpeg" 
                     alt="Image of the San Diego Supercomputer Center"
-                />
+                >
                 <h2>
                     San Diego Supercomputer Center (SDSC)
                 </h2>
@@ -117,9 +122,10 @@
             </div>
         </section>
         <section id="projects">
-            <div>
+            <h2>Projects</h2>
+            <div class="project-containers">
                 <section>
-                    <img src="./images/upCourt.jpg" alt="Upcourt Image of welcome page." width="300" height="400"/>
+                    <img src="./images/upCourt.jpg" alt="Upcourt Image of welcome page." width="300" height="400">
                     <project-details>
                         <h2>Up Court Mobile App</h2>
                         <p>Description: Some description of the app, this p tag is here for structure.</p>
@@ -139,7 +145,7 @@
                     </project-details>
                 </section>
                 <section>
-                    <img src="./images/bountyHunter.jpg" alt="Bounty Hunter Image of welcome page." width="300" height="400"/>
+                    <img src="./images/bountyHunter.jpg" alt="Bounty Hunter Image of welcome page." width="300" height="400">
                     <project-details>
                         <h2>Bounty Hunter Mobile App</h2>
                         <p>Description: Some description of the app, this p tag is here for structure.</p>
@@ -157,7 +163,7 @@
                     </project-details>
                 </section>
                 <section>
-                    <img src="./images/etchSketchSS.png" alt="Etch a Sketch Page" width="300" height="400"/>
+                    <img src="./images/etchSketchSS.png" alt="Etch a Sketch Page" width="300" height="400">
                     <project-details>
                         <h2>Etch A Sketch</h2>
                         <p>Description: Some description of the app, this p tag is here for structure.</p>
@@ -173,7 +179,7 @@
                     </project-details>
                 </section>
                 <section>
-                    <img src="./images/TicTacToe_SS.png" alt="Tic-Tac-Toe" width="300" height="400"/>
+                    <img src="./images/TicTacToe_SS.png" alt="Tic-Tac-Toe" width="300" height="400">
                     <project-details>
                         <h2>Tic Tac Toe</h2>
                         <p>Description: Some description of the app, this p tag is here for structure.</p>
@@ -189,7 +195,7 @@
                     </project-details>
                 </section>
                 <section>
-                    <img src="./images/AdminDashSS.png" alt="Admin Dashboard" width="400" height="400"/>
+                    <img src="./images/AdminDashSS.png" alt="Admin Dashboard" width="400" height="400">
                     <project-details>
                         <h2>Admin Dashboard Design</h2>
                         <p>Description: Some description of the app, this p tag is here for structure.</p>
@@ -204,41 +210,38 @@
                     </project-details>
                 </section>
             </div>
-
         </section>
-        <section id="contact">
-            <form action="" method="get">
-                <fieldset>
-                    <legend>Contact Form</legend>
-                    <field-input>
-                        <label for="name">Name: </label>
-                        <input type="text" name="name" id="name" required>
-                    </field-input>
-                    <field-input>
-                        <label for="email">Email: </label>
-                        <input type="email" name="email" id="email" required>
-                    </field-input>
-                    <field-input>
-                        <label for="message">Message: </label>
-                        <textarea type="text" name="message" id="message" rows="5" cols="33" required>
-                        </textarea>
-                    </field-input>
-                    <field-input>
-                        <label for="reason">Reason: </label>
-                        <input list="reason-choices" name="reason" id="reason" required>
-                        <datalist id="reason-choices">
-                            <option value="Business"></option>
-                            <option value="Personal"></option>
-                            <option value="Networking"></option>
-                        </datalist>
-                    </field-input>
-                    <button type="submit">Submit</button>
-                </fieldset>
-            </form>
-        </section>   
+        <form action="" method="get" id="contact">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <field-input>
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" required>
+                </field-input>
+                <field-input>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required>
+                </field-input>
+                <field-input>
+                    <label for="message">Message: </label>
+                    <textarea type="text" name="message" id="message" rows="5" cols="33" required>
+                    </textarea>
+                </field-input>
+                <field-input>
+                    <label for="reason">Reason: </label>
+                    <input list="reason-choices" name="reason" id="reason" required>
+                    <datalist id="reason-choices">
+                        <option value="Business"></option>
+                        <option value="Personal"></option>
+                        <option value="Networking"></option>
+                    </datalist>
+                </field-input>
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>  
     </main>
 
-    <hr />
+    <hr>
     <!-- Footer -->
     <footer>
         <a href="./images/dog.jpg">PICTURE OF DOG :]</a>
