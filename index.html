@@ -4,11 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migelangel's Portfolio Website</title>
-    <style>
-        span, code, hello-world {
-            border: 1px solid black;
-        }
-    </style>
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js" defer></script>
 </head>
@@ -19,16 +14,15 @@
     
     <header>
         <!-- Header -->
-        <a href="#landing-page"><h1>Migelangel Carrillo</h1></a>   
+        <a href="#landing-page"><h4>Migelangel Carrillo</h4></a>   
 
         <nav>
             <ul>
                 <!-- Will add sound effects to these using the "woosh" audio file -->
-                <li><h2><a href="#about-me" class="link">About Me</a></h2></li>
-                <li><h2><a href="#experience" class="link">Experience</a></h2></li>
-                <li><h2><a href="#projects" class="link">Projects</a></h2></li>
-                <li><h2><a href="#contact" class="link">Contact</a></h2></li>
-                <li><h2><a href="./tagPlayground.html" class="link">Element Demos</a></h2></li>
+                <li><h5><a href="#about-me" class="link">About Me</a></h5></li>
+                <li><h5><a href="#experience" class="link">Experience</a></h5></li>
+                <li><h5><a href="#projects" class="link">Projects</a></h5></li>
+                <li><h5><a href="#contact" class="link">Contact</a></h5></li>
             </ul>
         </nav>
         <!--   Links to the sections within the single page document     -->
@@ -39,11 +33,13 @@
     <main>
         <!-- This part will encompass the entire page, regardless of browser with scrolling to get to other section -->
         <section id="landing-page">
-            <!-- Set up for landing page -->
-            <img src="./images/headshot.JPG" alt ="Headshot of myself." width="300" height="400">
-            <h3>Welcome to my <span>Personal Website</span>!!!</h3> 
-            <!-- Will replace the above h3 with dynamic welcome message (at least 3 that will rotate after some setTimeout) -->
-            <p>3rd Year Math-CS major at UCSD | Incoming <strong>Software Engineering Intern</strong> at <em>Company XYZ</em></p>
+            <div>
+                <!-- Set up for landing page -->
+                <img src="./images/headshot.JPG" alt ="Picture of Migelangel at my high school graduation party." width="300" height="400" id="headshot">
+                <h3>Welcome to my <span>Personal Website</span></h3>
+                <!-- Will replace the above h3 with dynamic welcome message (at least 3 that will rotate after some setTimeout) -->
+                <p>3rd Year Math-CS major at UCSD | Incoming <strong>Software Engineering Intern</strong> at <em>Atlassian</em></p>
+            </div>
         </section>
         <section id="about-me">
             <h2>

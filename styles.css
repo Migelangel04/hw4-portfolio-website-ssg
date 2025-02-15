@@ -1,15 +1,109 @@
+
+/* Universal Styles for the Document */
 *
 {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
-table {
-    border: 2px solid black;
+:root {
+    --primary-red: #e44e58;
+    --secondary-red: #b9323b;
+    --dark-grey: #181a1b;
+    --light-grey: #a9a9a9;
+    --white: #fff;
+    --black: #322b2c;
+    --nav-font-size: 1rem;
+    --section-header-font-size: 1.25rem;
+    --regular-text-font-size: 0.75rem
 }
-project-details {
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+ul li {
+    list-style-type: none;
+}
+
+/* End of Universal Styles */
+
+/* Main Header and Nav Styles */
+header {
+    background-color: var(--primary-red);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1em 0.5em;
+    font-size: var(--nav-font-size);
+    text-align: center;
+    gap: 2em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    /* align-items: space-around; */
+    justify-content: center;
+    gap: 2em;
+    
+}
+/* End of Main and Nav Styles */
+
+/* Landing Page  */
+#landing-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-grey);
+    color: var(--white);
+    padding: 2em 2em;
+}
+#landing-page div {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 1em;
+    padding-top: 1em;
 }
-/* project-detatils is my semantic CSS custom element */
-/* Max 3 styles for HW2, CSE 134B */
+
+#headshot {
+    /* Image was optimized for delivery, went from 3.5MB to 566KB */
+    width: 150px;
+    height: 200px;
+}
+@media (max-width: 340px) {
+    /* Media Query to Adjust Image View on Mobile */
+    #headshot {
+        width: 150px;
+        height: 175px;
+        padding-top: 10%;
+    }
+}
+
+#landing-page p,
+#landing-page h3 {
+    font-size: var(--regular-text-font-size);
+    text-align: center;
+}
+
+#landing-page h3 {
+    font-size: var(--section-header-font-size);
+}
+
+#about-me {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+/* End of Landing Page Styles  */
+
+/* About Me Styles */
