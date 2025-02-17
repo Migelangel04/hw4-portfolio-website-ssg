@@ -242,6 +242,15 @@ experience-details {
     gap: 1rem;
 }
 
+@media (max-width: 650px) {
+    experience-details {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        gap: 1rem;
+    }
+}
+
 experience-details div {
     display: flex;
     align-items: flex-start;
@@ -264,14 +273,6 @@ experience-details div img {
 
 experience-details div p > span {
     text-decoration: underline;
-}
-
-@media (max-width: 650px) {
-    experience-details {
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 50% 50%;
-    }
 }
 
 /* End of Experience Section Styles */
