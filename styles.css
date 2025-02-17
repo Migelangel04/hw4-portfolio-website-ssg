@@ -1,6 +1,10 @@
-
+@font-face {
+    font-family: LoveYaLikeASister;
+    src: url("./fonts/LoveYaLikeASister-Regular.ttf");
+}
 /* Universal Styles for the Document */
 * {
+    font-family: LoveYaLikeASister, Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -356,7 +360,8 @@ project-detals div {
 }
 
 
-.projects-container project-details button {
+.projects-container project-details .project-links {
+    text-decoration: none;
     padding: 1em 1.5em;
     border-radius: 4px;
     border: none;
@@ -366,12 +371,18 @@ project-detals div {
     opacity: 0.8;
 }
 
-.projects-container project-details button:hover,
-.projects-container project-details button:active {
+.disabled-demo {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.projects-container project-details .project-links:hover,
+.projects-container project-details .project-links:active {
     opacity: 1;
 }
 
-.projects-container project-details button:active {
+.projects-container project-details .project-links:active {
     transform: translateY(4px);
 }
 
