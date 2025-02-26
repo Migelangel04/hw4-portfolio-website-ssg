@@ -480,6 +480,10 @@ button[type="submit"]:active {
     opacity: 1;
 }
 
+#contact fieldset output{
+    margin-top: -1em;
+}
+
 /* Required field indication */
 .required::after {
     content: '*';

@@ -227,7 +227,7 @@
                 </section>
             </div>
         </section>
-        <form action="https://example.com/" method="get" id="contact">
+        <form action="https://httpbin.org/post" method="post" id="contact">
             <fieldset>
                 <legend>Contact Form</legend>
                 <field-input>
@@ -243,6 +243,10 @@
                     <textarea name="message" id="message" rows="5" cols="33" required>
                     </textarea>
                 </field-input>
+                <output for="message" id="info-message">Feel free to send any message, whether personal or professional!</output>
+
+                <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+                
                 <button type="submit">Submit</button>
             </fieldset>
         </form>  
