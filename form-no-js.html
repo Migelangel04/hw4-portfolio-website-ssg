@@ -234,10 +234,12 @@
                 <field-input>
                     <label for="name" class="required">Name: </label>
                     <input type="text" name="name" id="name" required minlength="2" maxlength="50" placeholder="Full Name">
+                    <output for="message" id="error-message"></output>
                 </field-input>
                 <field-input>
                     <label for="email" class="required">Email: </label>
                     <input type="email" name="email" id="email" required placeholder="your@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <output for="message" id="error-message"></output>
                 </field-input>
                 <field-input>
                     <label for="message">Message: </label>
@@ -245,6 +247,7 @@
                     <small><span id="char-count">0</span>/500 characters</small>
                 </field-input>
                 <output for="message" id="info-message">Feel free to send any message, whether personal or professional!</output>
+                <output for="message" id="error-message"></output>
 
                 <input type="hidden" name="possible_bot" id="possible_bot" value="true">
                 

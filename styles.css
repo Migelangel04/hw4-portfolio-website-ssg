@@ -456,6 +456,14 @@ textarea {
     resize: vertical;
 }
 
+#message-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
 /* Submit button styling */
 button[type="submit"] {
     margin-top: 1em;
@@ -480,10 +488,6 @@ button[type="submit"]:active {
     opacity: 1;
 }
 
-#contact fieldset output{
-    margin-top: -1em;
-}
-
 /* Required field indication */
 .required::after {
     content: '*';
@@ -503,14 +507,6 @@ field-input  textarea:valid {
 field-input  input:placeholder-shown,
 field-input  textarea:placeholder-shown {
  border-color: var(--dark-grey);
-}
-/* Helper text */
-small {
- display: block;
- margin-top: 4px;
- font-size: 0.8rem;
- color: var(--light-grey);
- opacity: 0.8;
 }
 
 @media (max-width: 585px) {
