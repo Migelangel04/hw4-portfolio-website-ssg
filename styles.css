@@ -435,7 +435,7 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid var(--dark-grey);
+    border: 3px solid var(--dark-grey);
     border-radius: 6px;
     font-family: inherit;
     font-size: 1rem;
@@ -489,6 +489,28 @@ button[type="submit"]:active {
     content: '*';
     color: var(--secondary-red);
     margin-left: 3px;
+}
+
+field-input input:invalid,
+field-input textarea:invalid {
+ border-color: var(--secondary-red);
+}
+field-input input:valid,
+field-input  textarea:valid {
+ border-color: #4CAF50;
+}
+/* Only apply validation colors after user interaction */
+field-input  input:placeholder-shown,
+field-input  textarea:placeholder-shown {
+ border-color: var(--dark-grey);
+}
+/* Helper text */
+small {
+ display: block;
+ margin-top: 4px;
+ font-size: 0.8rem;
+ color: var(--light-grey);
+ opacity: 0.8;
 }
 
 @media (max-width: 585px) {
