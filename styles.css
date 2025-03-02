@@ -10,22 +10,41 @@
     margin: 0;
 }
 
+
+
 :root {
+    font-size: 18px;
     --primary-red: #e44e58;
     --secondary-red: #b9323b;
-    --dark-grey: #181a1b;
-    --light-grey: #a9a9a9;
-    --white: #fff;
-    --black: #322b2c;
+    --button-color: #e44e58;
     --nav-font-size: 1.25rem;
-    --section-header-font-size: 1.5rem;
-    --regular-text-font-size: 1rem;
-    --button-color: #4a90e2;
+    --section-header-font-size: 2rem;
+    --regular-text-font-size: 1rem; 
+    --background-one: #8e8e8e;
+    --background-two: #e6e6e6;
+    --primary-text-color: #000;    
+    --toggle-bg: #e6e6e6;
+    --toggle-active: #6e6e6e;
+}
+
+[data-theme="dark"] {
+    font-size: 18px;
+    --primary-red: #e44e58;
+    --secondary-red: #b9323b;
+    --button-color: #e44e58;
+    --nav-font-size: 1.25rem;
+    --section-header-font-size: 2rem;
+    --regular-text-font-size: 1rem; 
+    --background-one: #181a1b;
+    --background-two: #6e6e6e;
+    --primary-text-color: #f5f5f5;    
+    --toggle-bg: #e6e6e6;
+    --toggle-active: #6e6e6e;
 }
 
 a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--primary-text-color);
 }
 
 /* Main Header and Nav Styles */
@@ -43,6 +62,84 @@ header {
     z-index: 1000;
     min-width: 100%;
 }
+
+#interactive-nav {
+    display: flex;
+    justify-content: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-container {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+  }
+
+  .toggle-input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-bg);
+    transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--primary-text-color);
+    transition: .4s;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Add emoji using pseudo-element for better centering */
+  .toggle-slider:after {
+    position: absolute;
+    content: "☀️";
+    font-size: 12px;
+    left: 9px;
+    bottom: 9px;
+    z-index: 2;
+    transition: .4s;
+    pointer-events: none;
+    text-align: center;
+  }
+
+  .toggle-input:checked + .toggle-slider {
+    background-color: var(--toggle-active);
+  }
+
+  .toggle-input:checked + .toggle-slider:before {
+    transform: translateX(26px);
+  }
+
+  .toggle-input:checked + .toggle-slider:after {
+    content: "🌙";
+    transform: translateX(26px);
+  }
+
 
 header nav ul {
     display: flex;
@@ -71,7 +168,7 @@ nav ul li {
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: var(--white);
+    background-color: var(--primary-text-color);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -132,8 +229,8 @@ header > a:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-grey);
-    color: var(--white);
+    background-color: var(--background-one);
+    color: var(--primary-text-color);
     padding: 2em 2em;
 }
 #landing-page div {
@@ -177,7 +274,7 @@ header > a:active {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
-    background-color: var(--light-grey);
+    background-color: var(--background-two);
     padding: 5%;
     gap: 1rem;
 }
@@ -190,7 +287,7 @@ header > a:active {
 
 #about-me div > h2,
 #about-me div > p {
-    color: var(--black);
+    color: var(--primary-text-color);
     font-size: var(--regular-text-font-size);
     text-align: center;
 }
@@ -220,8 +317,8 @@ picture > * {
 /* Experience Section Styles */
 
 #experience {
-    background-color: var(--dark-grey);
-    color: var(--white);
+    background-color: var(--background-one);
+    color: var(--primary-text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -285,8 +382,8 @@ experience-details div p > span {
     justify-content: flex-start;
     gap: 1em;
     padding: 5% 10%;
-    background-color: var(--light-grey);
-    color: var(--dark-grey);
+    background-color: var(--background-two);
+    color: var(--primary-text-color);
   }
   
 #projects > h2 {
@@ -298,7 +395,7 @@ experience-details div p > span {
 .projects-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(500px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(500px, 600px));
     gap: 2em;
 }
 
@@ -307,8 +404,9 @@ experience-details div p > span {
     grid-template-rows: 35% 65%;
     border-radius: 12px;
     overflow: scroll;
+    overflow-x: hidden;
     /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
-    background-color: var(--dark-grey);
+    background-color: var(--background-one);
     z-index: 1;
 }
 
@@ -320,7 +418,7 @@ experience-details div p > span {
 }
 
 project-details {
-    color: var(--light-grey);
+    color: var(--primary-text-color);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -368,7 +466,7 @@ project-details div {
     border-radius: 4px;
     border: none;
     background-color: var(--button-color);
-    color: var(--white);
+    color: var(--primary-text-color);
     cursor: pointer;
     opacity: 0.8;
 }
@@ -394,15 +492,14 @@ project-details div {
 /* Start of Contact Form Styles */
 
 form {
-    background-color: var(--dark-grey);
-    color: var(--light-grey);
-    border: 2px solid var(--light-grey);
+    background-color: var(--background-one);
+    color: var(--primary-text-color);
     padding: 5% 10%;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 fieldset {
-    border: 1px solid var(--white);
+    border: 2px solid var(--primary-text-color);
     border-radius: 6px;
     padding: 20px;
     margin: 5% 10%;
@@ -414,7 +511,6 @@ fieldset {
 legend {
     font-size: var(--section-header-font-size);
     font-weight: bold;
-    color: var(--light-grey);
     padding: 0 10px;
     text-align: center;
     margin: 0 auto;
@@ -425,7 +521,6 @@ label {
     display: block;
     margin-bottom: 6px;
     font-weight: bold;
-    color: var(--light-grey);
     font-size: var(--regular-text-font-size);
 }
 
@@ -435,7 +530,7 @@ input[type="email"],
 textarea {
     width: 100%;
     padding: 8px;
-    border: 3px solid var(--dark-grey);
+    border: 4px solid var(--background-two);
     border-radius: 6px;
     font-family: inherit;
     font-size: 1rem;
@@ -446,7 +541,7 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
     outline: none;
-    border-color: var(--white);
+    border-color: var(--primary-text-color);
     box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
@@ -474,7 +569,7 @@ button[type="submit"] {
     align-self: center;
     padding: 20px 40px;
     background-color: var(--button-color);
-    color: var(--white);
+    color: var(--primary-text-color);
     border: none;
     border-radius: 4px;
     font-size: 1rem;
@@ -510,7 +605,7 @@ field-input  textarea:valid {
 /* Only apply validation colors after user interaction */
 field-input  input:placeholder-shown,
 field-input  textarea:placeholder-shown {
- border-color: var(--dark-grey);
+ border-color: var(--background-one);
 }
 
 @media (max-width: 585px) {
@@ -529,9 +624,10 @@ footer {
     align-items: center;
     justify-content: center;
     padding: 0.5em 1em;
-    background-color: var(--dark-grey);
-    color: var(--light-grey);
+    background-color: var(--background-two);
+    color: var(--primary-text-color);
     text-align: center;
+
 }
 .social-links {
     display: flex;
@@ -540,7 +636,7 @@ footer {
 }
 
 .social-icon {
-    fill: var(--light-grey);
+    fill: var(--primary-text-color);
     width: 24px;
     height: 24px;
 }

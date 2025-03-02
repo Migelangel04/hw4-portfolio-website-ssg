@@ -8,6 +8,24 @@ document.addEventListener('DOMContentLoaded', () => {
     let messageError = document.getElementById('error-message');
     let messageCharCount = document.getElementById('char-count');
     let possibleBot = document.getElementById('possible_bot');
+    const toggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+      toggle.checked = true;
+    }
+
+    toggle.addEventListener('change', function() {
+      if (this.checked) {
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        html.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      }
+    });
 
     message.addEventListener('input', () => {
         const length = message.value.length
