@@ -464,6 +464,10 @@ textarea {
     gap: 1rem;
 }
 
+field-input > output {
+    color: var(--secondary-red);
+}
+
 /* Submit button styling */
 button[type="submit"] {
     margin-top: 1em;
