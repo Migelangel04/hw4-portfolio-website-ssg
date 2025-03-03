@@ -1,0 +1,17 @@
+<section>
+    <img src="{{ project.image }}" alt="{{ project.imageAlt }}">
+    <project-details>
+        <h2>{{ project.title }}</h2>
+        <p><strong>Description: </strong>{{ project.description }}</p>
+        <p><strong>Technologies:</strong></p>
+        <ul>
+            {% for tech in project.technologies %}
+                <li>{{ tech }}</li>
+            {% endfor %}
+        </ul>
+        <div>
+            <a href="{{ project.demoLink }}" class="project-links{% if project.demoDisabled %} disabled-demo{% endif %}">Demo</a>
+            <a href="{{ project.sourceLink }}" class="project-links">Source Code</a>
+        </div>
+    </project-details>
+</section>

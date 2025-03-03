@@ -1,0 +1,29 @@
+{
+  "name": "hw4-portfolio-website-ssg",
+  "version": "1.0.0",
+  "description": "This is my personal portfolio website where I will thoroughly structure and design this webpage using HTML & CSS. This is for CSE134B HW4.",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Migelangel04/hw4-portfolio-website-ssg.git"
+  },
+  "keywords": [
+    "portfolio",
+    "11ty",
+    "static-site"
+  ],
+  "author": "Migelangel Carrillo",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Migelangel04/hw4-portfolio-website-ssg/issues"
+  },
+  "homepage": "https://github.com/Migelangel04/hw4-portfolio-website-ssg#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  }
+}

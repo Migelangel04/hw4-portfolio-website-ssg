@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Migelangel's Portfolio Website</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <noscript>
+        <style>
+            .toggle-container {
+                display: none !important;
+            }
+        </style>
+    </noscript>
+</head>
+    
+<body>
+
+    <!-- Most of the sections still require content, I am just filling for look and current presentation -->
+    
+    <header>
+        <a href="#landing-page"><h4>Migelangel Carrillo</h4></a>
+        <div id="interactive-nav">
+            <nav>
+                <input type="checkbox" id="nav-toggle" class="nav-toggle">
+                <label for="nav-toggle" class="nav-toggle-label">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <ul class="nav-menu">
+                    <li><h5><a href="#about-me" class="link">About Me</a></h5></li>
+                    <li><h5><a href="#experience" class="link">Experience</a></h5></li>
+                    <li><h5><a href="#projects" class="link">Projects</a></h5></li>
+                    <li><h5><a href="#contact" class="link">Contact</a></h5></li>
+                </ul>
+            </nav>
+            <label class="toggle-container">
+                <input type="checkbox" class="toggle-input" id="theme-toggle">
+                <span class="toggle-slider" for="theme-toggle"></span>
+            </label>
+        </div>
+    </header>
+    
+    <main>
+        <!-- This part will encompass the entire page, regardless of browser with scrolling to get to other section -->
+        <section id="landing-page">
+            <div>
+                <!-- Set up for landing page -->
+                <img src="./images/headshot.JPG" alt ="Picture of Migelangel at my high school graduation party." width="300" height="400" id="headshot">
+                <h2>Welcome to my <span>Personal Website</span></h2>
+                <!-- Will replace the above h3 with dynamic welcome message (at least 3 that will rotate after some setTimeout) -->
+                <p>3rd Year Math-CS major at UCSD | Incoming <strong>Software Engineering Intern</strong> at <em>Atlassian</em></p>
+            </div>
+        </section>
+        <section id="about-me">
+            <div>
+                <h2>
+                    About Me
+                </h2>
+                <p class="about-me-description">
+                    I’m a Mathematics-Computer Science student at UC San Diego with a passion for building scalable and user-friendly software. 
+                    Through internships at SDSC and personal projects like my NBA player analysis app, I’ve gained experience in full-stack and cloud development. 
+                    I enjoy solving complex problems and creating seamless user experiences. Outside of coding, I stay active with Latin dance and the gym. 
+                    My goal is to become a software engineer, focusing on full-stack or cloud technologies, in a role that emphasizes collaboration, innovation, and impact. 
+                    I value work-life balance and strive to bring both technical excellence and creativity to every project I work on.
+                </p>
+            </div>
+            <picture>
+                <source srcset="./images/pictureAtDinner.jpg" width="150" height="175" media="(orientation: portrait)">
+                <img src="./images/pictureAtDinner.jpg" alt="Picture at dinner" width="250" height="250">
+            </picture>
+        </section>
+        <section id="experience">
+            <!-- Section content complete, styles required -->
+            <h2>Experience</h2>
+            <experience-details>
+                <div>
+                    <img
+                        src="./images/sdsc.jpeg"
+                        alt="Image of the San Diego Supercomputer Center"
+                    >
+                    <h3>
+                        San Diego Supercomputer Center (SDSC)
+                    </h3>
+                    <p>
+                        <span>Role:</span> <em>Software Engineering Intern</em>
+                    </p>
+                    <p>
+                        <span>Duration:</span> 06/2024 - 08/2024
+                    </p>
+                    <section>
+                        <h3>Responsiblities/Achievements</h3>
+                        <ul>
+                            <li>
+                                Developed <b>Axios</b> filing, enabling seamless interaction between front-end applications and Django back-end
+                                services; enhanced data retrieval speed by <b>20%</b>, significantly improving overall application performance.
+                            </li>
+                            <li>
+                                Implemented user Sign Up and Login using <b>React Native</b> on the front-end to handle all valid and invalid inputs
+                                for a user, reducing API calls to the back-end by <b>10%</b>.
+                            </li>
+                            <li>
+                                Utilized State Management system for application using <b>Redux</b>, <b>Redux Toolkit</b> and <b>Async Storage</b> to increase
+                                user data fetch time on client-side code.
+                            </li>
+                            <li>
+                                Spearheaded the product design for both low-fidelity and high-fidelity prototypes in <b>Figma</b>, successfully delivering
+                                15 interactive mockups that streamlined the user feedback process and increased design approval rates by <b>40%</b>.
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <div>
+                    <img src="./images/atlassian.png" alt="Picture of Atlassian">
+                    <h3>
+                        Atlassian
+                    </h3>
+                    <p>
+                        <span>Role:</span> <em>Software Engineering Intern</em>
+                    </p>
+                    <p>
+                        <span>Duration:</span> Incoming (Projected 06/2025-09/2025)
+                    </p>
+                    <section>
+                        <h3>Responsiblities/Achievements</h3>
+                        <p>TBD</p>
+                    </section>
+                </div>
+            </experience-details>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                {% for project in projects %}
+                    {% include "project-card.html" %}
+                {% endfor %}
+            </div>
+        </section>
+        <form action="https://httpbin.org/post" method="post" id="contact">
+            <fieldset>
+                <legend>Contact Form</legend>
+                <field-input>
+                    <label for="name" class="required">Name: </label>
+                    <input type="text" name="name" id="name" required minlength="2" maxlength="50" placeholder="Full Name">
+                    <output for="message" id="error-name"></output>
+                </field-input>
+                <field-input>
+                    <label for="email" class="required">Email: </label>
+                    <input type="email" name="email" id="email" required placeholder="your@email.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    <output for="message" id="error-email"></output>
+                </field-input>
+                <field-input>
+                    <label for="message" class="required">Message: </label>
+                    <textarea name="message" id="message" rows="5" cols="33" minlength="3" maxlength="500" required placeholder="Your message!"></textarea>
+                    <div id="message-details">
+                        <output for="message" id="info-message">Feel free to send any message, whether personal or professional!</output>
+                        <small ><span id="char-count">0</span>/500 characters</small>
+                    </div>
+                    <output for="message" id="error-message"></output>
+                </field-input>
+
+                <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+                
+                <button type="submit">Submit</button>
+            </fieldset>
+        </form>  
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="copyright">
+            &copy;<span id="current-year">2025</span> Migelangel Carrillo. All rights reserved.
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/Migelangel04" title="GitHub" aria-label="Visit my GitHub profile">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/migelangel-carrillo-76063b269/" title="LinkedIn" aria-label="Visit my LinkedIn profile">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
+            
+        </div>
+    </footer>
+    <!--        -->
+
+</body>
+</html>
